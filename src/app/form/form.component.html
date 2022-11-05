@@ -1,7 +1,7 @@
 <div>
     <form>
         <label for="todo">Aggiungi alla lista:</label>
-        <input type="text" id="todo" name="todo">
-        <button type="button">Aggiungi</button>
+        <input type="text" id="todo" name="todo" #todoValue>
+        <button type="button" (click)="createTodo(todoValue.value)">Aggiungi</button>
     </form>
 </div>

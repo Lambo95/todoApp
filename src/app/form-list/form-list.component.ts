@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { Todo } from '../todo';
+import { TodosService } from '../todos.service';
 
 @Component({
   selector: 'app-form-list',
@@ -7,7 +8,14 @@ import { Todo } from '../todo';
   styleUrls: ['./form-list.component.scss'],
 })
 export class FormListComponent implements OnInit {
-  constructor() {}
+  todosArray: Todo[] = [];
+  constructor(private todosService: TodosService) {}
 
-  ngOnInit(): void {}
+  ngOnInit(): void {
+    this.todosArray = this.todosService.todos;
+  }
+
+  removesTodoItem(id: number): void {
+    this.todosService.removesTodo(id);
+  }
 }

@@ -5,7 +5,7 @@ import { Todo } from './todo';
   providedIn: 'root',
 })
 export class TodosService {
-  todosArray: Todo[] = [
+  todos: Todo[] = [
     {
       id: 1,
       title: 'template',
@@ -14,5 +14,11 @@ export class TodosService {
   ];
   constructor() {}
 
-  addTodo() {}
+  addTodo(obj: Todo): void {
+    this.todos.push(obj);
+  }
+
+  removesTodo(id: number) {
+    this.todos.splice(id, 1);
+  }
 }
