@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { Todo } from '../todo';
+import { TodoClass } from '../todo-class';
 import { TodosService } from '../todos.service';
 
 @Component({
@@ -8,11 +9,12 @@ import { TodosService } from '../todos.service';
   styleUrls: ['./form.component.scss'],
 })
 export class FormComponent implements OnInit {
+  arrayTodos: TodoClass[] = [];
   constructor(private todosService: TodosService) {}
 
   ngOnInit(): void {}
 
-  createTodo(obj: Todo): void {
-    this.todosService.addTodo(obj);
+  createTodo(objTxt: String): void {
+    this.todosService.addTodo(objTxt);
   }
 }

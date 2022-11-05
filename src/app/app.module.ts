@@ -8,6 +8,8 @@ import { FormComponent } from './form/form.component';
 import { NavComponent } from './nav/nav.component';
 import { TodosPage } from './todos/todos.page';
 import { FormListComponent } from './form-list/form-list.component';
+import { TodoClassClass } from './todo-class/todo-class.class';
+import { AddTodoComponent } from './add-todo/add-todo.component';
 
 @NgModule({
   declarations: [
@@ -18,6 +20,8 @@ import { FormListComponent } from './form-list/form-list.component';
     NavComponent,
     TodosPage,
     FormListComponent,
+    TodoClassClass,
+    AddTodoComponent,
   ],
   imports: [BrowserModule, AppRoutingModule],
   providers: [],
